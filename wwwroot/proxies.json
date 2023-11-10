@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "legacy-trip-update": {
+      "matchCondition": {
+        "route": "/realtime/trip-updates/v1/HSL"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/trip-updates/v2/hsl"
+    },
+    "legacy-service-alert": {
+      "matchCondition": {
+        "route": "/realtime/service-alerts/v1/"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/service-alerts/v2/hsl"
+    },
+    "service-alerts": {
+      "matchCondition": {
+        "route": "/realtime/service-alerts/v2/hsl"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/service-alerts/v2/hsl"
+    },
+    "trip-updates": {
+      "matchCondition": {
+        "route": "/realtime/trip-updates/v2/hsl"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/trip-updates/v2/hsl"
+    },
+    "google-trip-update": {
+      "matchCondition": {
+        "route": "/realtime/trip-updates-for-google/v2/hsl"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/trip-updates-for-google/v2/hsl"
+    },
+    "vehicle-positions": {
+      "matchCondition": {
+        "route": "/realtime/vehicle-positions/v2/hsl"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/vehicle-positions/v2/hsl"
+    },
+    "vehicle-positions-trainmetro": {
+      "matchCondition": {
+        "route": "/realtime/vehicle-positions-trainmetro/v2/hsl"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/vehicle-positions-trainmetro/v2/hsl"
+    },
+    "vehicle-position-bustram": {
+      "matchCondition": {
+        "route": "/realtime/vehicle-positions-bustram/v2/hsl"
+      },
+      "backendUri": "https://transitdataprod.blob.core.windows.net/vehicle-positions-bustram/v2/hsl"
+    },
+    "DocumentationRedirectProxy": {
+      "matchCondition": {
+        "route": "/"
+      },
+      "backendUri": "https://transitdatadevproxy.azurewebsites.net/api/DocumentationRedirect"
+    }
+  }
+}
